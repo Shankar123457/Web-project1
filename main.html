@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Showcase</title>
+    <link rel="stylesheet" href="a1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0F7FA; 
+            color: #a7b2c4; 
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000; 
+            color: rgb(226, 219, 219);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .event-card {
+            background-color: rgb(130, 185, 173);
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .event-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .book-now {
+            background-color: #00c40a; 
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .book-now:hover {
+            background-color: #388E3C; 
+        }
+        .cta {
+            background-color: #F1F8E9; 
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .cta h2 {
+            color: #2E7D32; 
+        }
+        .cta p {
+            color: #4A4A4A;
+        }
+        .cta input {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        .cta button {
+            padding: 10px 15px;
+            background-color: #66BB6A; 
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .cta button:hover {
+            background-color: #388E3C; 
+        }
+    </style>
+    <script>
+        
+        function redirectToPayment(eventName, eventPrice) {
+            const paymentUrl = `payment.html?event=${encodeURIComponent(eventName)}&price=${eventPrice}`;
+            window.location.href = paymentUrl;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Moc Events</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="event-container">
+            
+            <div class="event-card">
+                <img src="imgs/1.jpg" alt="Concert in the Park">
+                <h3>Concert in the Park</h3>
+                <p class="event-date">Date: July 15, 2023</p>
+                <p class="event-location">Location: New York City</p>
+                <p class="event-description">Join us for an unforgettable night of music and fun in the park!</p>
+                <p class="event-price">Ticket Price: $30</p>
+                <button class="book-now" onclick="redirectToPayment('Concert in the Park', 30)">Book Now</button>
+            </div>
+
+            
+            <div class="event-card">
+                <img src="imgs/2.jpg" alt="Theater Performance">
+                <h3>Theater Performance</h3>
+                <p class="event-date">Date: August 22, 2023</p>
+                <p class="event-location">Location: Chicago</p>
+                <p class="event-description">Experience a captivating theater performance with a talented cast.</p>
+                <p class="event-price">Ticket Price: $50</p>
+                <button class="book-now" onclick="redirectToPayment('Theater Performance', 50)">Book Now</button>
+            </div>
+
+            
+            <div class="event-card">
+                <img src="imgs/3.jpg" alt="Art Exhibition">
+                <h3>Art Exhibition</h3>
+                <p class="event-date">Date: September 10, 2023</p>
+                <p class="event-location">Location: San Francisco</p>
+                <p class="event-description">Explore stunning artworks from local artists.</p>
+                <p class="event-price">Ticket Price: $20</p>
+                <button class="book-now" onclick="redirectToPayment('Art Exhibition', 20)">Book Now</button>
+            </div>
+
+           
+            <div class="event-card">
+                <img src="imgs/4.jpg" alt="Food Festival">
+                <h3>Food Festival</h3>
+                <p class="event-date">Date: October 5, 2023</p>
+                <p class="event-location">Location: Los Angeles</p>
+                <p class="event-description">Taste delicious food from various cuisines!</p>
+                <p class="event-price">Ticket Price: $25</p>
+                <button class="book-now" onclick="redirectToPayment('Food Festival', 25)">Book Now</button>
+            </div>
+
+        
+            <div class="event-card">
+                <img src="imgs/5.jpg" alt="Tech Conference">
+                <h3>Tech Conference 2023</h3>
+                <p class="event-date">Date: November 12, 2023</p>
+                <p class="event-location">Location: Austin</p>
+                <p class="event-description">Join industry leaders and innovators at this annual tech event.</p>
+                <p class="event-price">Ticket Price: $100</p>
+                <button class="book-now" onclick="redirectToPayment('Tech Conference 2023', 100)">Book Now</button>
+            </div>
+
+            
+            <div class="event-card">
+                <img src="imgs/6.jpg" alt="Jazz Night">
+                <h3>Jazz Night</h3>
+                <p class="event-date">Date: December 1, 2023</p>
+                <p class="event-location">Location: New Orleans</p>
+                <p class="event-description">Enjoy a night of smooth jazz in a cozy atmosphere.</p>
+                <p class="event-price">Ticket Price: $40</p>
+                <button class="book-now" onclick="redirectToPayment('Jazz Night', 40)">Book Now</button>
+            </div>
+
+          
+            <div class="event-card">
+                <img src="imgs/7.jpg" alt="Comedy Night">
+                <h3>Comedy Night</h3>
+                <p class="event-date">Date: January 20, 2024</p>
+                <p class="event-location">Location: Boston</p>
+                <p class="event-description">Laugh out loud with top comedians from around the country.</p>
+                <p class="event-price">Ticket Price: $35</p>
+                <button class="book-now" onclick="redirectToPayment('Comedy Night', 35)">Book Now</button>
+            </div>
+
+            
+            <div class="event-card">
+                <img src="imgs/8.jpg" alt="Wine Tasting">
+                <h3>Wine Tasting Festival</h3>
+                <p class="event-date">Date: February 14, 2024</p>
+                <p class="event-location">Location: Napa Valley</p>
+                <p class="event-description">Sample exquisite wines from local and international vineyards.</p>
+                <p class="event-price">Ticket Price: $60</p>
+                <button class="book-now" onclick="redirectToPayment('Wine Tasting Festival', 60)">Book Now</button>
+            </div>
+            <div class="event-card">
+                <img src="imgs/9.jpg" alt="Marathon">
+                <h3>City Marathon</h3>
+                <p class="event-date">Date: March 5, 2024</p>
+                <p class="event-location">Location: Chicago</p>
+                <p class="event-description">Join thousands of runners in this annual city-wide marathon.</p>
+                <p class="event-price">Registration Fee: $80</p>
+                <button class="book-now" onclick="redirectToPayment('City Marathon', 80)">Register Now</button>
+            </div>
+
+           
+            <div class="event-card">
+                <img src="imgs/10.jpg" alt="Book Fair">
+                <h3>International Book Fair</h3>
+                <p class="event-date">Date: April 18, 2024</p>
+                <p class="event-location">Location: New York City</p>
+                <p class="event-description">Explore a vast collection of books from authors worldwide.</p>
+                <p class="event-price">Ticket Price: $15</p>
+                <button class="book-now" onclick="redirectToPayment('International Book Fair', 15)">Book Now</button>
+            </div>
+
+          
+            <div class="event-card">
+                <img src="imgs/11.jpg" alt="Fashion Show">
+                <h3>Spring Fashion Week</h3>
+                <p class="event-date">Date: May 10, 2024</p>
+                <p class="event-location">Location: Paris</p>
+                <p class="event-description">Witness the latest trends at this glamorous fashion event.</p>
+                <p class="event-price">Ticket Price: $120</p>
+                <button class="book-now" onclick="redirectToPayment('Spring Fashion Week', 120)">Book Now</button>
+            </div>
+
+         
+            <div class="event-card">
+                <img src="imgs/12.jpg" alt="Summer Music Festival">
+                <h3>Summer Music Festival</h3>
+                <p class="event-date">Date: June 22-24, 2024</p>
+                <p class="event-location">Location: Los Angeles</p>
+                <p class="event-description">Three days of non-stop music from top artists across genres.</p>
+                <p class="event-price">3-Day Pass: $250</p>
+                <button class="book-now" onclick="redirectToPayment('Summer Music Festival', 250)">Book Now</button>
+            </div>
+        </div>
+    </main>
+    
+    <section class="cta">
+        <h2>Join Us for Upcoming Events!</h2>
+        <p>Stay updated with the latest happenings. Subscribe to our newsletter and never miss an event!</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Moc Events. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+            <div class="newsletter">
+                <h4>Subscribe to our newsletter</h4>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
